@@ -3,8 +3,8 @@ import { youtubeSearch } from '@bochilteam/scraper'
 import yts from 'yt-search'
 let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 
-    if (!text) throw `✳️ Enter a song title\n\n*📌 Example*\n*${usedPrefix + command}* Lil Peep hate my fuccn life `
-    m.react('📀')
+    if (!text) throw `✳️ සිංදුවේ නම ලබාදෙන්න.\n\n*📌 උදා:*\n*${usedPrefix + command}* මිත්‍යා මායම් රැප් `
+    m.react('🎵')
     let result = await yts(text)
     let ytres = result.all
     let listSections = []
@@ -14,7 +14,7 @@ let handler = async(m, { conn, usedPrefix, text, args, command }) => {
           ['🎥 MP4', `${usedPrefix}fgmp4 ${v.url}`, `▢ ⌚ *Duratión:* ${v.timestamp}\n▢ 👀 *Views:* ${v.views}\n▢ 📌 *Títle* : ${v.title}\n▢ 📆 *Publiced:* ${v.ago}\n`]
         ]])
 	})
-	return conn.sendList(m.chat, '  ≡ *GURU MUSIC*🔎', `\n 📀 Here a list of results from :\n *${text}*`, igfg, `Click `, listSections, m)
+	return conn.sendList(m.chat, '  ≡ *PASI MUSIC*🔎', `\n 📀 Here a list of results from :\n *${text}*`, igfg, `Click `, listSections, m)
 }
 handler.help = ['play2']
 handler.tags = ['dl']
