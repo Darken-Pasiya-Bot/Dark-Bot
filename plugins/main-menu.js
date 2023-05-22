@@ -34,13 +34,13 @@ let readMore = more.repeat(850)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 ┏─────────────────⬣
-┆ 𝑯𝒂𝒊, ${name}
+┆ 𝑯𝒊, ${name}
 ┗┬──────────────┈ ⳹
 ┏┤ Bot Info  
 ┆┗──────────────┈ ⳹
 ┆♠︎ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${botname}
 ┆♠︎ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${author}
-┆♠︎ 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗡𝗮𝗺𝗲 :𝐺𝑈𝑅𝑈
+┆♠︎ 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 𝗡𝗮𝗺𝗲 :𝙿𝙰𝚂𝙸𝙽𝙳𝚄
 ┆♠︎ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 :linux 
 ┆♠︎ *Uptime* : ${uptime}
 ┆♠︎ *Experience:* ${exp}
@@ -60,7 +60,7 @@ let str = `
 ┆𝗗𝗮𝘁𝗲 :${date} 
 ┗─────────────────⬣
 ┆──────────────┈ ⳹
-┆type /list to
+┆type /list or menu to
 ┆to see all cmd
 ┗─────────────────⬣`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
@@ -69,7 +69,7 @@ let str = `
 }
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu', 'help','h','command'] 
+handler.command = ['main', 'help','h','command'] 
 
 export default handler
 function clockString(ms) {
@@ -88,7 +88,7 @@ function clockString(ms) {
         res = "Good Afternoon ☀️"
       }
       if (time >= 15) {
-        res = "Good Afternoon 🌇"
+        res = "Good Evening 🌇"
       }
       if (time >= 18) {
         res = "Good Night 🌙"
