@@ -4,10 +4,10 @@ import fg from 'api-dylux'
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 
  let chat = global.db.data.chats[m.chat]
-  if (!chat.nsfw) throw `🚫 this group doesnot support nsfw \n\nto turn on  \n*${usedPrefix}enable* nsfw`
+  if (!chat.nsfw) throw `🚫 this group does not support nsfw \n\nto turn on  \n*${usedPrefix}enable* nsfw`
   let user = global.db.data.users[m.sender].age
   if (user < 17) throw `❎ age must be 18 to use this feature`
-  if (!text) throw `✳️ what to search?\n📌 Use : *${usedPrefix + command} <search>*\n\nExample:- Hot desi bhabi or u can use link also\nExample .xnxx link *`
+  if (!text) throw `✳️ what to search?\n📌 Use : *${usedPrefix + command} <search>*\n\n*Example*:- Hot desi girl \n You can download from use link also\nExample .xnxx (link) *`
     
     m.react(rwait)
     if (text.includes('http://') || text.includes('https://')) {
@@ -15,7 +15,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
         try {
             let xn = await (await fetch(global.API('fgmods', '/api/dowloader/xnxxdl', { url: text }, 'apikey'))).json()
             conn.sendFile(m.chat, xn.result.files.high, xn.result.title + '.mp4', `
-≡  *XNXX DL*
+≡  *XNXX DOWNLOAD*
             
 ▢ *📌Title*: ${xn.result.title}
 ▢ *⌚Duration:* ${xn.result.duration}
@@ -32,7 +32,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
              let listSections = []
               Object.values(json.result).map((v, index) => {
               listSections.push([`${index}┃ ${v.title}`, [
-                    ['🎥 MP4', `${usedPrefix}xnxxdl ${v.link}`, `▢ 📌 *Título* : ${v.title}`]
+                    ['🎥 MP4', `${usedPrefix}xnxxdl ${v.link}`, `▢ 📌 *Title* : ${v.title}`]
                   ]])
               })
               //return conn.sendList(m.chat, '  ≡ *XNXX DL*🔎', `\n 🔞 Results:\n *${text}*`, fgig, `Click Here`, listSections, m)
