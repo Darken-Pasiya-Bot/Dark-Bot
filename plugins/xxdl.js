@@ -21,7 +21,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 ▢ *⌚Duration:* ${xn.result.duration}
 ▢ *🎞️Quality:* ${xn.result.quality}
 `.trim(), m, false, { asDocument: chat.useDocument })
- m.react(done)
+ m.react('👙')
  } catch (e) {
     m.reply(`🔴 Error : we are trying hard to fix`)
  }
