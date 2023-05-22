@@ -6,8 +6,8 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
 	var limit
      if((isOwner || isPrems)) limit = 1200
      else limit = 100
-   if (!args[0]) throw `✳️ Enter the mediafire link next to the command`
-    if (!args[0].match(/mediafire/gi)) throw `❎ Link incorrect`
+   if (!args[0]) throw `✳️ Mediafire ලින්ක් එක ලබාදෙන්න.`
+    if (!args[0].match(/mediafire/gi)) throw `❎ ලින්ක් එක වලංගු නොවේ.`
     m.react(rwait)
     let full = /f$/i.test(command)
     let u = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0]
@@ -22,7 +22,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner, isPrems }) =
 ▢ *Size:* ${filesizeH}
 ▢ *Extension:* ${ext}
 ▢ *Uploaded:* ${aploud}
-${isLimit ? `\n▢ The file exceeds the download limit *+${limit} MB*\nUpgrade to premium to be able to download files more than *900 MB*` : ''} 
+${isLimit ? `\n▢ මෙම ෆයිල් එක බාගත කිරීමෙ සීමාව ඉක්මවා ඇත. *+${limit} MB*\nUpgrade to premium to be able to download files more than *900 MB*` : ''} 
 `.trim()
     await conn.sendFile(m.chat, ss, 'ssweb.png', caption, m)
     
@@ -33,6 +33,6 @@ handler.help = ['mediafire <url>']
 handler.tags = ['dl', 'prem']
 handler.command = ['mediafire', 'mfire'] 
 handler.diamond = true
-handler.premium = false
+handler.premium = true
 
 export default handler
