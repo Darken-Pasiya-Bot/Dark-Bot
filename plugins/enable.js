@@ -215,7 +215,7 @@ const listMessage = {
 `)
       throw false
   }
-  conn.sendButton(m.chat, `
+conn.sendButton(m.chat, `
 ≡ *OPTIONS*
 ┌───────────
 ▢ 🗂️ *Type:* ${type} 
