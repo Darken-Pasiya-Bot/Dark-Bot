@@ -215,7 +215,7 @@ const listMessage = {
 `)
       throw false
   }
-  /*conn.sendButton(m.chat, `
+  conn.sendButton(m.chat, `
 ≡ *OPTIONS*
 ┌───────────
 ▢ 🗂️ *Type:* ${type} 
@@ -223,7 +223,7 @@ const listMessage = {
 ▢ 🏮 *For:* ${isAll ? 'this bot' : isUser ? '' : 'this chat'}
 └───────────
 `,igfg, null, [[`${isEnable ? '🔴 Deactive' : '✅ Active'}`, `${isEnable ? `${usedPrefix}off ${type}` : `${usedPrefix}on ${type}`}`], ['⦙☰ Menu', `${usedPrefix}help`]],m)
-*/
+
 
 m.reply(`
 ✅ *${type}* Now *${isEnable ? 'Active' : 'Deactive'}* ${isAll ? 'for this bot' : isUser ? '' : 'for this bot'}
