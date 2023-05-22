@@ -2,11 +2,11 @@
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 import yts from 'yt-search'
 var handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `Use example ${usedPrefix}${command} naruto blue bird`
+  if (!text) throw `Use example ${usedPrefix}${command} දම් රැජිනි බස් වීඩියෝ`
   await m.reply(wait)
   let search = await yts(text)
   let vid = search.videos[Math.floor(Math.random() * search.videos.length)]
-  if (!search) throw 'Video Not Found, Try Another Title'
+  if (!search) throw 'වීඩියෝ සොයාගත නොහැකි විය .වෙනත් යමක් සර්ච් කරන්න'
   let { title, thumbnail, timestamp, views, ago, url } = vid
   let wm = 'Downloading audio please wait'
 
@@ -23,16 +23,16 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
 ⬡ Views: ${views}
 ⬡ Upload: ${ago}
 ⬡ Link: ${url}
-╰────────⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['VIDEO', `${usedPrefix}ytmp4 ${url}`], false, { quoted: m, 'document': { 'url':'https://wa.me/917605902011' },
+╰────────⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['VIDEO', `${usedPrefix}ytmp4 ${url}`], false, { quoted: m, 'document': { 'url':'https://wa.me/94755435083' },
 'mimetype': global.dpdf,
-'fileName': `𝔾𝕌ℝ𝕌 ℙ𝕃𝔸𝕐𝔼ℝ`,
+'fileName': `𝙿𝙰𝚂𝙸𝙽𝙳𝚄 𝙿𝙻𝙰𝚈𝙴𝚁`,
 'fileLength': 666666666666666,
 'pageCount': 666,contextInfo: { externalAdReply: { showAdAttribution: true,
 mediaType:  2,
 mediaUrl: `${url}`,
 title: `AUDIO IS BEING SENT...`,
 body: wm,
-sourceUrl: 'http://wa.me/917605902011', thumbnail: await ( await conn.getFile(thumbnail)).data
+sourceUrl: 'http://wa.me/94755435083', thumbnail: await ( await conn.getFile(thumbnail)).data
   }
  } 
 })
