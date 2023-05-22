@@ -4,10 +4,10 @@ import fg from 'api-dylux'
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 
  let chat = global.db.data.chats[m.chat]
-  if (!chat.nsfw) throw `🚫 දැනට මෙම ගෘපය තුල මේ සඳහා අවසර නැත. \n\nඔන් කිරීමට  \n*${usedPrefix}enable* nsfw`
+  if (!chat.nsfw) throw `🚫 දැනට මේ සඳහා අවසර නැත. \n\nඔන් කිරීමට  \n*${usedPrefix}enable* nsfw`
   let user = global.db.data.users[m.sender].age
   if (user < 17) throw `❎ වැල් බලන්න උබට වයස මදි😂. 18 වෙලා වරෙන් `
-  if (!text) throw `✳️ සර්ච් කරන්න අවශ්‍ය කුමක්ද ?\n📌 Use : *${usedPrefix + command} <search>*\n\n*උදා*:- Hot desi girl \n ලින්ක් එක තියෙනව නම වීඩියෝ එක ඩව්න්ලෝඩ් කරන්න මෙහෙම.\nExample .xnxx (link) *`
+  if (!text) throw `✳️ සර්ච් කරන්න අවශ්‍ය කුමක්ද ?\n📌 Use : *${usedPrefix + command} <search>*\n\n*උදා*:- Hot desi girl \n ලින්ක් එක තිබේ නම් වීඩියෝ එක ඩව්න්ලෝඩ් කිරීමට.\nExample .xnxx (link) *`
     
     m.react(rwait)
     if (text.includes('http://') || text.includes('https://')) {
@@ -21,6 +21,8 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 ▢ *⌚Duration:* ${xn.result.duration}
 ▢ *🎞️Quality:* ${xn.result.quality}
 `.trim(), m, false, { asDocument: chat.useDocument })
+ m.react('🍑')
+ m.react('🍌')
  m.react('👙')
  } catch (e) {
     m.reply(`🔴 Error : we are trying hard to fix`)
