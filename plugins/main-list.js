@@ -1,5 +1,5 @@
 let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems })  => m.reply(`
-┏━━━━━━━━━━━━━━━━┓
+┏━━━━⍤⃝᳇ρ̶ͥαᷧѕⷨι͜и∂υ❤️⟧➳̶̶̶̶͟͞━━━┓
 ┃  *<All menu />*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
 ┣  💟 groups
@@ -281,10 +281,10 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isP
 ┣ ඬ⃟ 👽 _${usedPrefix}slap *<@tag>*_
 ┣ ඬ⃟ 👽 _${usedPrefix}kiss *<@tag>*_
 ┣ ඬ⃟ 👽 _${usedPrefix}wm *<packname> <author>*_
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┗━━━━━━━━⍤⃝᳇ρ̶ͥαᷧѕⷨι͜и∂υ❤️⟧➳̶̶̶̶͟͞━━━━━━━━┛
 `.trim())
 handler.help = ['allmenu']
 handler.tags = ['main']
-handler.command = ['list', 'all menu'] 
+handler.command = ['list', 'all menu', 'menu'] 
 
 export default handler
